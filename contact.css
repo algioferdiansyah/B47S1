@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+Double+Pica:ital@1&family=Poppins:wght@200&family=Raleway:wght@200&display=swap');
+
+* {
+    text-decoration: none;
+    font-family: 'IM Fell DW Pica', serif;
+}
+
+form {
+    width: 500px;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+form div  {
+    padding: 10px;
+}
+
+label {
+    font-size: 20px;
+}
+
+input, 
+select, 
+textarea {
+    background-color: #dfdede;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+button {
+    background-color: #444444;
+    color: white;
+    padding: 4px 25px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:#353535;
+
+}

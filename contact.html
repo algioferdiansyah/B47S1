@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css"/>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li>
+                    <img src="logo.png" alt="dumbways_logo" />
+                </li>
+                <li>
+                    <a class="active" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <form>
+        <Div>
+            <label for="input-name">Name</label>
+            <input id="input-name" height="100" type="text" required />
+        </Div>
+        <div>
+            <label for="input-email">Email</label>
+            <input id="input-email" type="text" required />
+        </div>
+        <div>
+            <label for="input-phone">Phone Number</label>
+            <input id="input-phone" type="number" required />
+        </div>
+        <div>
+            <label for="input-subject">Subject</label>
+            <select id="input-subject">
+                <option value="" hidden>Select</option>
+                <option>Front-End Developer</option>
+                <option>Back-End Developer</option>
+                <option>Fullstack Developer</option>
+            </select>
+        </div>
+        <div>
+            <label for="input-messages">Your Messages</label>
+            <textarea id="input-messages" rows="5" cols="10"></textarea>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>
