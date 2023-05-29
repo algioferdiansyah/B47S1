@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=IM+Fell+Double+Pica:ital@1&family=Poppins:wght@200&family=Raleway:wght@200&display=swap');
+
+* {
+    text-decoration: none;
+    font-family: 'IM Fell DW Pica', serif;
+    color: black;
+}
+
+form {
+    width: 500px;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form .h1 {
+    justify-content: center;
+}
+
+form .container-date {
+display: flex;
+justify-content: space-between;
+padding-left: 1px;
+padding-right: 1px;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+
+form .sdate input {
+    width: 100%;
+}
+
+form .edate input {
+    width: 100%;
+}
+
+form .checkbox {
+    /* background-color: antiquewhite; */
+    display: flex;
+}
+
+form h1 {
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+/* input,  */
+input#input-sdate,
+input#input-edate,
+input#input-nameproject,
+input#input-blog-image {
+    background-color: #dfdede;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid gray;
+    gap: 10;
+}
+
+select, 
+textarea {
+    background-color: #dfdede;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid gray;
+    gap: 10;
+}
+
+.btn-check {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-check .checkbox {
+    display: flex;
+    /* justify-content: space-between; */
+    align-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.btn-group {
+   text-align: right;
+}
+
+.btn-group .button {
+    background-color: #444444;
+    color: white;
+    padding: 4px 25px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.project-container {
+    margin: auto;
+    padding-top: 50px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-card {
+    width: 400px;
+    height: 550px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    box-shadow:  -1px -1px 5px 1px #444444;
+    border-radius: 10px;
+}
+
+.project-card img {
+    border-radius: 10px;
+    /* margin-top: 10px; */
+}
+
+.title {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.card-button {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.card-button button {
+    width: 150px;
+    font-size: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.social-mediad1 i {
+    margin-right: 10px;
+    font-size: 25px;
+}

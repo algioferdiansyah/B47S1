@@ -93,3 +93,24 @@ section {
     margin-right: 10px;
     font-size: 25px;
 }
+
+#barsmenu {
+    display: none;
+}
+
+.hamburger-nav-container {
+    font-size: 23px;
+    list-style-type: none;
+    /* display: none; */
+}
+
+.hamburger-nav-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #9a9a9a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid white;
+}

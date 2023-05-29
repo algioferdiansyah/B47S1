@@ -22,3 +22,8 @@ margin : 10px, 20px, 30px dst
 - git add . // menambahkan semua folder/file yang ter-update ke dalam local git
 - git commit -m "your messages" // untuk memberikan message terhadap folder/file yang kita modifikasi
 - git push remote_name branch_name untuk meng-upload/mem-push code/folder/file yang sudah kita modifikasi ke dalam local git kita
+
+note styling :
+array, menampung lebih dari 1 data yang sama
+object, menampung lebih dr 1 object/porperti dalam 1 penampung data yang sama
+array of object, menampuh lbh dr 1 data objek, dlm 1 penampung data yang sama

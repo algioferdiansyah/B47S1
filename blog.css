@@ -50,7 +50,7 @@
 }
 
 .blog-form form .input-blog-image-group label p {
-     font-size: 12px;
+     font-size: 18px;
 }
 
 .blog-form form .input-blog-image-group label {
@@ -59,11 +59,13 @@
     align-items: center;
     justify-content: space-between;
 }
-
+/* buttonnya */
 .blog-form form .button-group {
+    margin-top: 10px;
     text-align: right;
 }
 
+/* dalam buttonnya */
 .blog-form form button {
     margin-top: 50px;
     padding: 10px 20px;
@@ -73,11 +75,13 @@
     border: none;
     color: white;
     cursor: pointer;
+    justify-content: right;
 }
 
+/* garis batas antara form dan berita */
 .blog .line {
     border: 1px solid #dbdbdb;
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -119,6 +123,22 @@
     margin-bottom: 20px;
 }
 
+.blog .blog-list .btn-group .btn-edit {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #cbcbcb;
+    color: black;
+}
+
+.blog .blog-list .btn-group .btn-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: orangered;
+    color: white;
+}
+
 .blog .blog-list h1 a {
     text-decoration: none;
     color: #000;
@@ -146,7 +166,7 @@
 
 .blog-detail-container {
     width: 80%;
-    margin: 40px;
+    margin: 40px 0;
 }
 
 .blog-detail-container img {
@@ -172,6 +192,8 @@
     margin-top: 40px;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;  
+    font-size: 24px;
+    line-height: 240%;
+    text-align: justify;
 }
 
