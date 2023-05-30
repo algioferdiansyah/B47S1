@@ -62,6 +62,8 @@
 // console.log(dataCaleg[1]);
 // console.log(dataCaleg[2].nama);
 
+//tempat menyimpan inputannya di:
+//dataBlog adalah variabel
 let dataBlog = []
 
 function addBlog(event) {
@@ -79,7 +81,7 @@ function addBlog(event) {
         title,
         content,
         image,
-        postAt: "19 May 2023",
+        postAt: new Date(),
         author: "Algi Ferdiansyah",
     };
 
@@ -111,12 +113,111 @@ function renderBlog() {
                         <h1><a href="blog-detail.html" target="_blank"
                             >${dataBlog[index].title}</a>
                         </h1>
-                        <div class="detail-blog-content">${dataBlog[index].postAt} | ${dataBlog[index].author}</div>
+                        <div class="detail-blog-content">
+                        ${getFullTime(dataBlog[index].postAt)} | ${dataBlog[index].author}
+                        </div>
                         <p style="text-align: justify; font-family: 'IM Fell DW Pica', serif;" ;>
                         ${dataBlog[index].content}
                         </p>
+                        <div style="float: left; margin: 10px">
+                            <p style="font-size: 15px; color: grey">${getDistanceTime(dataBlog[index].postAt)}</p>
+                        </div>
                     </div>
+
                 </div>
                 `
     }
 }
+
+// function: fungsi
+// getFullTime: nama fungsi
+// (time):parameter
+function getFullTime(time) {
+    // console.log("get Full Time");
+    // let time = new Date();
+    // console.log(time);
+
+    // kurung siku untuk array(harus lebih dr 1 data),datanya adalah jan,feb,dll
+    let monthName = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ];
+    // console.log(monthName[9]);
+
+    // getFullTime.date:function
+    let date = time.getDate();
+    // console.log(date);
+
+    let monthIndex = time.getMonth();
+    // console.log(monthIndex);
+
+    let year = time.getFullYear();
+    // console.log(year);
+
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
+    // console.log(minutes);
+
+    // if dan else adalah pengkondisian
+    // 0=jika commen terpenuhi, maka akan dia jalanin
+    // hours, minutes adalah variabel
+    if (hours <= 9) {
+        hours = "0" + hours;
+        // jika if gabisa dijalankan, maka akan menjalankan kondisi di else ini
+        // <= 9 : value yang kurang dari 9 dan termasuk 9 maka dia jalan.
+        // ==9 : hanya value 9 yg bisa jalan
+        // != : tidak samadengan, jadi diluar angka 9 dia jalan
+    } else if (minutes <= 9) {
+        minutes = "0" + minutes;
+    }
+
+    return `${date} ${monthName[monthIndex]} ${year} ${hours}:${minutes} WIB`;
+}
+
+function getDistanceTime(time) { 
+    // let adalah penampung, dan timeNow adalah nama variabel
+    let timeNow = new Date();
+    let timePost = time;
+
+    //waktu skrg, akan dikurangin waktu kapan kita post
+    let distance = timeNow - timePost; //hasilnya milidetik
+    console.log(distance);
+
+    let miliSecond = 1000 //penampung dengan nama milisecond
+    let secondInHours = 3600 //penampung dengan nama secondinhours(dalam 1 jam ada 3600dtk)
+    let hoursInDays = 24 //dalam 1 hari ada 24 jam
+
+    // distanceday adalah jarak dari harinya
+    // Math. adalah interistik objek yg membolehkan kita dalam menggunakan mtk
+    // floor adalah Metod, dia bakal ngereturn(membalikan) dari nilai number yg sama/lebih/kurang.
+    let distanceDay = Math.floor(distance / (miliSecond * secondInHours * hoursInDays)) //1000x3600x24= 86400000 = 1/86400000
+    console.log(distanceDay);
+    let distanceHours = Math.floor (distance / (miliSecond * 60 * 60)); // 1:3600000
+    let distanceMinutes = Math.floor (distance / (miliSecond * 60)); // 1:60000
+    let distanceSecond = Math.floor (distance / miliSecond); // 1:1000
+
+    if (distanceDay > 0) {
+        return `${distanceDay} Day Ago`;
+    } else if (distanceHours > 0) {
+        return `${distanceHours} Hours Ago`;
+    } else if (distanceMinutes > 0) {
+        return `${distanceMinutes} Minutes Ago`;
+    } else {
+        return `${distanceSecond} Seconds Ago`;
+    }
+}   
+
+// fungsinya ketika kita ingin mengulang satu fungsi(renderBlog),300 (maka fungsi ini akan dijalankan setiap 3000 milisecond)
+setInterval(function() {
+    renderBlog()
+}, 1000);
